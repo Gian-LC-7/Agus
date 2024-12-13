@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Mensaje Especial</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            background: linear-gradient(135deg, #f0f8ff, #ffe4e1);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            line-height: 1.8;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .heart {
+            color: #ff6f61;
+            font-size: 2em;
+            animation: pulse 1.5s infinite;
+            margin-top: 20px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Fondo animado */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+            }
+            100% {
+                transform: translateY(-10vh) translateX(calc(100vw - 50px));
+            }
+        }
+
+        .background span:nth-child(odd) {
+            animation-delay: 2s;
+            background: rgba(255, 105, 97, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Feliz Cumpleaños, Agus! 🎉</h1>
+    <p>Hoy cumplís 21 años, y no podía dejar pasar la oportunidad de escribirte algo especial. Aunque solo nos vimos dos veces y hablamos una vez, esa charla me permitió ver algo de la persona increíble que sos.</p>
+    <p>Me contaste sobre los problemas con tu familia y el esfuerzo que hiciste y hacés para bancarte un entorno que no te hace bien. Quiero decirte que eso no es algo menor. Elegir lo mejor para vos misma, incluso cuando duele o cuesta, demuestra una fortaleza que pocas personas tienen a tu edad. No solo saliste adelante, sino que lo hiciste creciendo y construyendo algo mejor.</p>
+    <p>Sé que te lo dije antes, pero me hace feliz saber que estás logrando todo eso. Ver cómo enfrentás la vida, cómo progresás y cómo cuidás de vos misma es algo que inspira y, sinceramente, alegra a quienes estamos cerca, incluso desde lejos.</p>
+    <p>Espero que este día no sea "uno más" como los momentos que te toca celebrar, y tengas mucho cariño y cosas lindas, porque te lo merecés. Y más allá de los festejos (que no te copan jaja), deseo que este año sea el inicio de un camino lleno de momentos felices, personas que sumen y sueños cumplidos.</p>
+    <p>Gracias por compartir un poquito de vos conmigo. Sos una persona especial, y estoy seguro de que te esperan cosas grandes.</p>
+    <p class="heart">❤️</p>
+    <p>Un abrazo grande, Gian</p>
+
+    <div class="background">
+        <!-- Partículas -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
